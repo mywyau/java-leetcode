@@ -7,11 +7,12 @@
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
+    java
     application
     // Apply the Spring Boot plugin
-    id("org.springframework.boot") version "3.2.0"
-    // Apply the Spring Dependency Management plugin
-    id("io.spring.dependency-management") version "1.1.4"
+    // id("org.springframework.boot") version "3.2.0"
+    // // Apply the Spring Dependency Management plugin
+    // id("io.spring.dependency-management") version "1.1.4"
 }
 
 repositories {
@@ -20,19 +21,19 @@ repositories {
 }
 
 dependencies {
-    // Spring Boot Starter Web for building web applications, including RESTful services
-    implementation("org.springframework.boot:spring-boot-starter-web")
+    // // Spring Boot Starter Web for building web applications, including RESTful services
+    // implementation("org.springframework.boot:spring-boot-starter-web")
     
-    // Spring Boot Starter Test for testing Spring Boot applications
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    // // Spring Boot Starter Test for testing Spring Boot applications
+    // testImplementation("org.springframework.boot:spring-boot-starter-test")
     
-    // Use JUnit Jupiter for testing.
+    // // Use JUnit Jupiter for testing.
     testImplementation(libs.junit.jupiter)
 
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    // testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
-    // This dependency is used by the application.
-    implementation(libs.guava)
+    // // This dependency is used by the application.
+    // implementation(libs.guava)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -42,59 +43,19 @@ java {
     }
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = "java_practice.App"
-    // mainClass = "my_springboot.App"  // uncomment and run for other app
-}
+// application {
+//     // Define the main class for the application.
+//     mainClass = "java_practice.App"
+//     // mainClass = "my_springboot.App"  // uncomment and run for other app
+// }
 
-tasks.register("runJavaPracticeApp", JavaExec::class) {
+tasks.register("roman_numerals", JavaExec::class) {
     group = "application"
-    mainClass = "java_practice.basics.App"
+    mainClass = "easy.RomanNumerals"
     classpath = sourceSets.main.get().runtimeClasspath
 }
 
-tasks.register("runSpringBoot", JavaExec::class) {
-    group = "application"
-    mainClass = "springboot.App"
-    classpath = sourceSets.main.get().runtimeClasspath
-}
 
-tasks.register("arrayListsExamples", JavaExec::class) {
-    group = "application"
-    mainClass = "java_practice.collections.ArrayListsExamples"
-    classpath = sourceSets.main.get().runtimeClasspath
-}
-
-tasks.register("forLoopExamples", JavaExec::class) {
-    group = "application"
-    mainClass = "java_practice.ForLoops"
-    classpath = sourceSets.main.get().runtimeClasspath
-}
-
-tasks.register("genericClasses", JavaExec::class) {
-    group = "application"
-    mainClass = "java_practice.generics.GenericClasses"
-    classpath = sourceSets.main.get().runtimeClasspath
-}
-
-tasks.register("genericMethods", JavaExec::class) {
-    group = "application"
-    mainClass = "java_practice.generics.GenericMethods"
-    classpath = sourceSets.main.get().runtimeClasspath
-}
-
-tasks.register("errorHandling", JavaExec::class) {
-    group = "application"
-    mainClass = "java_practice.error_handling.ErrorHandling"
-    classpath = sourceSets.main.get().runtimeClasspath
-}
-
-tasks.register("enumExample1", JavaExec::class) {
-    group = "application"
-    mainClass = "java_practice.enums.EnumExample1"
-    classpath = sourceSets.main.get().runtimeClasspath
-}
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.

@@ -14,3 +14,5 @@ echo "Building the application..."
 # Run tests
 echo "Running tests..."
 ./gradlew test
+# ./gradlew test --warning-mode all
+
