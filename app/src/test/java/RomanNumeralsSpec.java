@@ -3,6 +3,7 @@
  */
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import easy.RomanNumerals;
@@ -11,18 +12,76 @@ class RomanNumeralsSpec {
 
     RomanNumerals romanNumerals = new RomanNumerals();
 
-    @Test
-    void converts3999ToRoman() {
-        assertEquals("MMMCMXCIX", romanNumerals.intToRoman(3999));
+    @Nested
+    class RomanToInt {
+
+        @Test
+        public void testSingleLetters() {
+            assertEquals(1, romanNumerals.romanToInt("I"));
+            assertEquals(5, romanNumerals.romanToInt("V"));
+            assertEquals(10, romanNumerals.romanToInt("X"));
+            assertEquals(50, romanNumerals.romanToInt("L"));
+            assertEquals(100, romanNumerals.romanToInt("C"));
+            assertEquals(500, romanNumerals.romanToInt("D"));
+            assertEquals(1000, romanNumerals.romanToInt("M"));
+        }
+
+        @Test
+        public void testSimpleNumbers() {
+            assertEquals(3, romanNumerals.romanToInt("III"));
+            assertEquals(8, romanNumerals.romanToInt("VIII"));
+            assertEquals(20, romanNumerals.romanToInt("XX"));
+            assertEquals(30, romanNumerals.romanToInt("XXX"));
+        }
+
+        @Test
+        public void testSubtractiveNotation() {
+            assertEquals(4, romanNumerals.romanToInt("IV"));
+            assertEquals(9, romanNumerals.romanToInt("IX"));
+            assertEquals(40, romanNumerals.romanToInt("XL"));
+            assertEquals(90, romanNumerals.romanToInt("XC"));
+            assertEquals(400, romanNumerals.romanToInt("CD"));
+            assertEquals(900, romanNumerals.romanToInt("CM"));
+        }
+
+        @Test
+        public void testComplexNumbers() {
+            assertEquals(58, romanNumerals.romanToInt("LVIII"));       // L = 50, V = 5, III = 3
+            assertEquals(1994, romanNumerals.romanToInt("MCMXCIV"));    // 1000 + 900 + 90 + 4
+            assertEquals(2024, romanNumerals.romanToInt("MMXXIV"));     // 2000 + 20 + 4
+        }
+
+        //TODO: handle these cases
+        // @Test
+        // public void testLowercaseInput() {
+        //     // only valid if your implementation normalizes case
+        //     assertEquals(1994, romanNumerals.romanToInt("mcmxciv"));
+        // }
+
+        // @Test
+        // public void testInvalidInput() {
+        //     // only valid if you throw exceptions for bad input
+        //     assertThrows(IllegalArgumentException.class, () -> romanNumerals.romanToInt("ABCD"));
+        //     assertThrows(IllegalArgumentException.class, () -> romanNumerals.romanToInt("XIIXZ"));
+        // }
     }
 
-    @Test
-    void converts58ToRoman() {
-        assertEquals("LVIII", romanNumerals.intToRoman(58));
-    }
+    @Nested
+    class IntToRoman {
 
-    @Test
-    void converts4ToRoman() {
-        assertEquals("IV", romanNumerals.intToRoman(4));
+        @Test
+        void converts3999ToRoman() {
+            assertEquals("MMMCMXCIX", romanNumerals.intToRoman(3999));
+        }
+
+        @Test
+        void converts58ToRoman() {
+            assertEquals("LVIII", romanNumerals.intToRoman(58));
+        }
+
+        @Test
+        void converts4ToRoman() {
+            assertEquals("IV", romanNumerals.intToRoman(4));
+        }
     }
 }
