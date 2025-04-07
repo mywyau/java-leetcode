@@ -8,8 +8,10 @@ import java.util.Map;
 public class TwoSum {
 
     static class Pair {
+
         int val;
         int index;
+
         Pair(int val, int index) {
             this.val = val;
             this.index = index;
@@ -44,20 +46,39 @@ public class TwoSum {
         return new int[]{}; // no solution
     }
 
+    // public int[] twoSumHashMap(int[] nums, int target) {
+    //     Map<Integer, Integer> map = new HashMap<>(); // value -> index
+    //     for (int i = 0; i < nums.length; i++) {
+    //         int complement = target - nums[i];
+    //         if (map.containsKey(complement)) {
+    //             return new int[] { map.get(complement), i };
+    //         }
+    //         map.put(nums[i], i);
+    //     }
+    //     return new int[] {}; // if no solution
+    // }
+
+
     public int[] twoSumHashMap(int[] nums, int target) {
-        
-        Map<Integer, Integer> map = new HashMap<>(); // value -> index
+
+        Map<Integer, Integer> map = new HashMap<>();  // Purpose: Quickly check if a number’s complement has been seen before.
 
         for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
+            int complement = target - nums[i];   // target - current number
 
-            if (map.containsKey(complement)) {
-                return new int[] { map.get(complement), i };
+            // Check if the needed complement exists in the map:
+
+            // If yes, it means we’ve already seen a number that, when added to nums[i], equals target.    
+            // Return both indices: the index of the complement (from the map), and the current index i.
+
+            if (map.containsKey(complement)) {    
+                return new int[]{map.get(complement), i};
             }
 
+            // map.put(nums[i], i);
             map.put(nums[i], i);
         }
 
-        return new int[] {}; // if no solution
+        return new int[]{};  // error case return an empty array to handle no pairs found
     }
 }
