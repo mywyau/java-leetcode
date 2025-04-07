@@ -1,6 +1,9 @@
 package easy;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSum {
 
@@ -13,7 +16,7 @@ public class TwoSum {
         }
     }
 
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSumTwoPointer(int[] nums, int target) {
         int n = nums.length;
         Pair[] pairs = new Pair[n];
 
@@ -39,5 +42,22 @@ public class TwoSum {
         }
 
         return new int[]{}; // no solution
+    }
+
+    public int[] twoSumHashMap(int[] nums, int target) {
+        
+        Map<Integer, Integer> map = new HashMap<>(); // value -> index
+
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+
+            if (map.containsKey(complement)) {
+                return new int[] { map.get(complement), i };
+            }
+
+            map.put(nums[i], i);
+        }
+
+        return new int[] {}; // if no solution
     }
 }
