@@ -25,8 +25,6 @@ public class MergeStrings {
         return result.toString();
     }
 
-
-
     public String mergeAlternatelyTwoPointer(String word1, String word2) {
         StringBuilder merged = new StringBuilder();
 
@@ -52,12 +50,12 @@ public class MergeStrings {
         return merged.toString();
     }
 
-    // public static void main(String[] args) {
-    //     System.out.println(mergeAlternately("abc", "pqr"));    // Output: apbqcr
-    //     System.out.println(mergeAlternately("ab", "pqrs"));    // Output: apbqrs
-    //     System.out.println(mergeAlternately("abcd", "pq"));    // Output: apbqcd
-    // }
+    public static void main(String[] args) {
+
+        MergeStrings ms = new MergeStrings();
+
+        System.out.println(ms.mergeAlternately("abc", "pqr")); // Output: apbqcr
+        System.out.println(ms.mergeAlternately("ab", "pqrs")); // Output: apbqrs
+        System.out.println(ms.mergeAlternately("abcd", "pq")); // Output: apbqcd
+    }
 }
-
-
-

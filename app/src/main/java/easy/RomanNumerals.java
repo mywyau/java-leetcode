@@ -5,6 +5,18 @@ import java.util.Map;
 
 public class RomanNumerals {
 
+    public static void main(String[] args) {
+        RomanNumerals rn = new RomanNumerals();
+
+        String roman = "MCMXCIV"; // Example: 1994
+        int value = rn.romanToInt(roman);
+        System.out.println("Roman to Int: " + roman + " = " + value);
+
+        int number = 2024;
+        String romanConverted = rn.intToRoman(number);
+        System.out.println("Int to Roman: " + number + " = " + romanConverted);
+    }
+
     // easy
     public int romanToInt(String s) {
         Map<Character, Integer> roman = new HashMap<>();
@@ -38,21 +50,23 @@ public class RomanNumerals {
 
     // medium
     // public String intToRoman(int num) {
-    //     int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};  // arrays faster than Map traversal
-    //     String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-    //     StringBuilder result = new StringBuilder();
-    //     for (int i = 0; i < values.length; i++) {
-    //         while (num >= values[i]) {
-    //             num -= values[i];
-    //             result.append(symbols[i]);
-    //         }
-    //     }
-    //     return result.toString();
+    // int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}; //
+    // arrays faster than Map traversal
+    // String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX",
+    // "V", "IV", "I"};
+    // StringBuilder result = new StringBuilder();
+    // for (int i = 0; i < values.length; i++) {
+    // while (num >= values[i]) {
+    // num -= values[i];
+    // result.append(symbols[i]);
     // }
-    
+    // }
+    // return result.toString();
+    // }
+
     public String intToRoman(int num) {
-        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        int[] values = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+        String[] symbols = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
 
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < values.length; i++) {
