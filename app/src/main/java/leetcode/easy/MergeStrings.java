@@ -1,5 +1,5 @@
 
-package easy;
+package leetcode.easy;
 
 public class MergeStrings {
 

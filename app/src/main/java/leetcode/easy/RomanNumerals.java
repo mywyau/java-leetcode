@@ -1,22 +1,9 @@
-package easy;
+package leetcode.easy;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class RomanNumerals {
-
-    public static void main(String[] args) {
-        RomanNumerals rn = new RomanNumerals();
-
-        String roman = "MCMXCIV"; // Example: 1994
-        int value = rn.romanToInt(roman);
-        System.out.println("Roman to Int: " + roman + " = " + value);
-
-        int number = 2024;
-        String romanConverted = rn.intToRoman(number);
-        System.out.println("Int to Roman: " + number + " = " + romanConverted);
-    }
-
     // easy
     public int romanToInt(String s) {
         Map<Character, Integer> roman = new HashMap<>();
@@ -77,6 +64,18 @@ public class RomanNumerals {
 
         }
         return result.toString();
+    }
+
+    public static void main(String[] args) {
+        RomanNumerals rn = new RomanNumerals();
+
+        String roman = "MCMXCIV"; // Example: 1994
+        int value = rn.romanToInt(roman);
+        System.out.println("Roman to Int: " + roman + " = " + value);
+
+        int number = 2024;
+        String romanConverted = rn.intToRoman(number);
+        System.out.println("Int to Roman: " + number + " = " + romanConverted);
     }
 
 }

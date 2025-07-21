@@ -1,0 +1,45 @@
+🧩 1. Creational Patterns – Object Creation
+---------------------------------------------------------------
+Pattern           | Description                             | Example Use Case
+------------------|------------------------------------------|----------------------------------------------
+Singleton         | Ensures one instance globally            | Database connection pool, logger
+Factory Method    | Delegates object creation to subclasses  | Creating shapes like Circle, Square
+Abstract Factory  | Factory of factories                     | UI toolkit (WindowsFactory, MacFactory)
+Builder           | Builds complex objects step-by-step      | Person.builder().setName("A").build()
+Prototype         | Clones existing objects                  | Game characters or trees in GUIs
+
+🏗 2. Structural Patterns – Composition of Classes/Objects
+---------------------------------------------------------------
+Pattern   | Description                                 | Example Use Case
+----------|---------------------------------------------|-----------------------------------------------
+Adapter   | Converts one interface to another           | List to Array, Enumeration to Iterator
+Decorator | Adds behavior to objects at runtime         | Adding logging or compression to streams
+Composite | Treats groups and individual items the same | File/folder hierarchy
+Proxy     | Adds a placeholder or security layer        | Remote proxy (RMI), lazy loading
+Facade    | Simplifies complex subsystem                | JDBC helper or Spring's JdbcTemplate
+
+⚙ 3. Behavioral Patterns – Communication Between Objects
+---------------------------------------------------------------
+Pattern                | Description                            | Example Use Case
+------------------------|----------------------------------------|----------------------------------------------
+Strategy               | Chooses an algorithm at runtime        | Sorting strategy (QuickSort, MergeSort)
+Observer               | Subscribes to event changes            | UI event listeners, Pub/Sub
+Command                | Encapsulates a request                 | Undo/redo, command queues
+Template Method        | Defines skeleton of an algorithm       | Abstract class defining steps, subclasses fill in
+Iterator               | Provides a way to traverse collections | Java Iterator interface
+State                  | Changes behavior based on state        | Vending machine, TCP connection
+Chain of Responsibility| Passes request along chain             | Logging, validation pipeline
+
+🔁 4. Common DSA Patterns – Problem-Solving (LeetCode)
+---------------------------------------------------------------
+Pattern              | When to Use              | Example Problem
+---------------------|--------------------------|-----------------------------------------------
+Two Pointers         | Arrays/strings           | Merge sorted arrays, reverse vowels
+Sliding Window       | Substrings/subarrays     | Max sum subarray, longest unique substring
+Fast & Slow Pointer  | Cycles                   | Detect cycle in linked list
+Backtracking         | Search with undo         | Sudoku, N-Queens
+DFS/BFS              | Trees, graphs            | Maze solving, level order traversal
+Union-Find           | Disjoint sets            | Number of connected components
+Greedy               | Locally optimal = global | Interval scheduling, coin change (greedy)
+Dynamic Programming  | Overlapping subproblems  | Knapsack, Fibonacci, edit distance
+Heap/Priority Queue  | Top-k, ordering          | Median finder, k closest points

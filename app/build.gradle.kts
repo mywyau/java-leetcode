@@ -49,12 +49,43 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
-tasks.register("roman_numerals", JavaExec::class) {
+tasks.register("TwoSum", JavaExec::class) {
     group = "application"
-    mainClass = "easy.RomanNumerals"
+    mainClass = "leetcode.easy.TwoSum"
     classpath = sourceSets.main.get().runtimeClasspath
 }
 
+
+tasks.register("MergeStrings", JavaExec::class) {
+    group = "application"
+    mainClass = "leetcode.easy.MergeStrings"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+
+tasks.register("RomanNumerals", JavaExec::class) {
+    group = "application"
+    mainClass = "leetcode.easy.RomanNumerals"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("CoinChange", JavaExec::class) {
+    group = "application"
+    mainClass = "dynamic_programming.CoinChange"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("Fibonacci", JavaExec::class) {
+    group = "application"
+    mainClass = "dynamic_programming.Fibonacci"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("FibonacciTab", JavaExec::class) {
+    group = "application"
+    mainClass = "dynamic_programming.FibonacciTab"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
 
 
 tasks.named<Test>("test") {
