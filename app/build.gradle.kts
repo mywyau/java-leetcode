@@ -55,6 +55,18 @@ tasks.register("TwoSum", JavaExec::class) {
     classpath = sourceSets.main.get().runtimeClasspath
 }
 
+tasks.register("AddTwoNumbers", JavaExec::class) {
+    group = "application"
+    mainClass = "leetcode.medium.addTwoNumbers.AddTwoNumbers"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("ValidParentheses", JavaExec::class) {
+    group = "application"
+    mainClass = "leetcode.easy.ValidParentheses"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 
 tasks.register("MergeStrings", JavaExec::class) {
     group = "application"
