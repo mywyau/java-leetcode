@@ -67,6 +67,12 @@ tasks.register("ValidParentheses", JavaExec::class) {
     classpath = sourceSets.main.get().runtimeClasspath
 }
 
+tasks.register("MergeTwoSortedLists", JavaExec::class) {
+    group = "application"
+    mainClass = "leetcode.easy.mergeTwoSortedLists.MergeTwoSortedLists"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 
 tasks.register("MergeStrings", JavaExec::class) {
     group = "application"
