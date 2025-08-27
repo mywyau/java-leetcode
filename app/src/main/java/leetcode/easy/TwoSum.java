@@ -19,6 +19,7 @@ public class TwoSum {
     }
 
     public int[] twoSumTwoPointer(int[] nums, int target) {
+
         int n = nums.length;
         Pair[] pairs = new Pair[n];
 
@@ -70,19 +71,19 @@ public class TwoSum {
         return new int[] {}; // error case return an empty array to handle no pairs found
     }
 
-    public int[] twoSum(int[] nums, int target) {
 
+    public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
-
             if (map.containsKey(complement)) {
-                return new int[] { map.get(complement), i };
+                return new int[] {map.get(complement), i};
             }
             map.put(nums[i], i);
         }
-        return new int[] {}; // error case return an empty array to handle no pairs found
+
+        return new int[] {};
     }
 
     public static void main(String[] args) {

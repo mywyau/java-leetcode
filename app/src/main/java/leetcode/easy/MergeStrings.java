@@ -4,6 +4,7 @@ package leetcode.easy;
 public class MergeStrings {
 
     public String mergeAlternately(String word1, String word2) {
+
         StringBuilder result = new StringBuilder();
         int i = 0, j = 0;
 
@@ -26,6 +27,7 @@ public class MergeStrings {
     }
 
     public String mergeAlternatelyTwoPointer(String word1, String word2) {
+        
         StringBuilder merged = new StringBuilder();
 
         int ptr1 = 0; // pointer for word1

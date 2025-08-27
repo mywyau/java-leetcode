@@ -17,10 +17,10 @@ gradle wrapper
 Please look inside build.gradle.kts for task names to run
 
 ```
-./run_custom_tag.sh <task name>
+./run.sh <task name>
 ```
 
 ```
-./run_custom_tag.sh forLoopExamples
+./run.sh forLoopExamples
 ```
 
