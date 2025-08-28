@@ -49,6 +49,13 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("MaxSumSubarray", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.arrays.sliding_window.MaxSumSubarray"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+
 tasks.register("TwoSum", JavaExec::class) {
     group = "application"
     mainClass = "leetcode.easy.TwoSum"

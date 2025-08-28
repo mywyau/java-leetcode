@@ -1,4 +1,4 @@
-package leetcode.easy.arrays;
+package dsa.arrays;
 
 public class ArrayTraversal {
 

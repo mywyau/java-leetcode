@@ -1,0 +1,55 @@
+
+The sliding window is an optimization over brute-force algorithms when dealing with subarrays or substrings.
+
+Instead of checking every possible subarray, you "slide" a window across the array,
+keeping track of a running total or condition — making it O(n) instead of O(n²).
+
+Two Main Types of Sliding Windows
+
+1. Fixed-size window
+
+The window size (e.g. k) is constant.
+
+You just move the window to the right.
+
+🔸 Common for problems like:
+
+"Find max sum of subarray of size k"
+
+"Average of subarrays of size k"
+
+
+2. Variable-size (Dynamic) window
+
+The window expands or shrinks based on a condition (e.g., unique characters, sum ≤ k, etc.).
+
+You move the right pointer to expand the window, and left pointer to shrink it when the condition breaks.
+
+🔸 Common for problems like:
+
+Longest substring without repeating characters
+
+Minimum window substring
+
+Subarray sum problems
+
+
+
+💡 Summary: What to Look For
+If the problem says...
+
+"Find max/min sum/average of subarray size k"	Fixed-size window
+"Longest/shortest subarray that satisfies a condition"	Variable-size window
+"Substring without repeats/with at most K chars"	Variable-size window
+"In-place or linear time subarray search"	Sliding window
+
+
+What Sliding Window Solves (Faster Than Brute Force)
+
+Instead of O(n²):
+
+for (i = 0; i < n; i++)
+  for (j = i; j < n; j++)
+    check subarray nums[i..j]
+
+Sliding window does it in O(n) by moving left and right intelligently.

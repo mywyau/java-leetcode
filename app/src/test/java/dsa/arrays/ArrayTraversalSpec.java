@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import leetcode.easy.arrays.ArrayTraversal;
-
 public class ArrayTraversalSpec {
 
     ArrayTraversal arrayTraversal = new ArrayTraversal();
