@@ -49,6 +49,12 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("HashMapExamples", JavaExec::class) {
+    group = "application"
+    mainClass = "basics.HashMapExamples"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("MaxSumSubarray", JavaExec::class) {
     group = "application"
     mainClass = "dsa.arrays.sliding_window.MaxSumSubarray"

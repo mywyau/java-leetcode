@@ -1,4 +1,4 @@
-package leetcode.easy;
+package dsa.hash_maps;
 
 import java.util.Arrays;
 import java.util.Comparator;

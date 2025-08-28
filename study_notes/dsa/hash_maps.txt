@@ -1,0 +1,24 @@
+
+A HashMap is a data structure that stores key-value pairs, allowing you to:
+
+- Insert a value associated with a key
+- Retrieve a value in O(1) time (on average)
+- Delete a key-value pair
+
+Create a map	                            Map<KeyType, ValueType> map = new HashMap<>();
+Insert/update	                            map.put(key, value);
+Get a value	                                map.get(key);
+Check if key exists	                        map.containsKey(key);
+Remove a key	                            map.remove(key);
+Iterate over entries	                    for (Map.Entry<KeyType, ValueType> entry : map.entrySet())
+
+
+Concepts and applications to master:
+
+-Frequency counting
+-Duplicate detection
+-Set-based lookups
+-Key/value pattern recognition
+
+
+

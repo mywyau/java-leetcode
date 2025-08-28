@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import leetcode.easy.TwoSum;
+import dsa.hash_maps.TwoSum;
 
 public class TwoSumSpec {
 
