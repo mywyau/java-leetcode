@@ -1,0 +1,14 @@
+Some patterns, rules and conditions to look out for when think about applying two pointer technique:
+
+-  The array is sorted	                                Scan from both ends or detect duplicates efficiently
+-  You must modify in-place	                            Use a slow pointer to overwrite data
+-  You're finding pairs or checking symmetry	            Two ends work toward the center
+-  You're partitioning	                                Split elements based on a condition
+
+
+
+"Sorted array"	                                            Left/right pointer search
+"In-place removal" or "no extra space"	                    Slow/fast pointer
+"Find a pair" or "sum = target"	                            Shrinking window or left/right pointers
+"Reverse / Palindrome"	                                    Compare or swap ends
+"Middle element" or "Nth from end"	                        Fast/slow pointer (linked list)
