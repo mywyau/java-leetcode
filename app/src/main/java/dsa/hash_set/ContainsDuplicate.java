@@ -20,6 +20,9 @@ public class ContainsDuplicate {
     }
 
     // Optimal Solution: Use a HashSet
+    // 💡 Why HashSet?
+    // A Set only stores unique elements — if we try to add a duplicate, we know it already exists.
+    
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> seen = new HashSet<>();
 

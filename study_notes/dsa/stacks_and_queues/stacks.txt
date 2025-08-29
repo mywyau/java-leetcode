@@ -1,0 +1,30 @@
+Stacks & Queues
+
+These are the next foundational tools for solving:
+    - Expression parsing
+    - Parentheses validation
+    - Monotonic patterns
+    - BFS (in graphs & trees)
+
+------------------------------
+
+Stack
+
+LIFO: Last-In, First-Out
+
+Java: Stack<>, Deque<>, or ArrayDeque<>
+
+Used for:
+- Undo operations
+- Validating parentheses
+- Tracking previous values
+
+------------------------------
+
+
+Stack is perfect for problems with nested structure or reverse matching
+
+Use push for open brackets, and pop for matching close
+
+Always check for empty stack before popping
+------------------------------

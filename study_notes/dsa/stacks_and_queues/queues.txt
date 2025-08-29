@@ -1,0 +1,18 @@
+Queues
+
+FIFO: First-In, First-Out
+
+Java: Queue<>, LinkedList<>, ArrayDeque<>
+
+- Used for:
+- BFS traversal
+- Task scheduling
+
+------------------------------
+
+
+
+
+
+
+
