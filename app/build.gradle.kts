@@ -49,6 +49,18 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("Fibonacci", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.recursion.Fibonacci"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("MaxDepthBinaryTree", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.trees.MaxDepthBinaryTree"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("HashMapExamples", JavaExec::class) {
     group = "application"
     mainClass = "basics.HashMapExamples"
@@ -105,19 +117,6 @@ tasks.register("CoinChange", JavaExec::class) {
     mainClass = "dynamic_programming.CoinChange"
     classpath = sourceSets.main.get().runtimeClasspath
 }
-
-tasks.register("Fibonacci", JavaExec::class) {
-    group = "application"
-    mainClass = "dynamic_programming.Fibonacci"
-    classpath = sourceSets.main.get().runtimeClasspath
-}
-
-tasks.register("FibonacciTab", JavaExec::class) {
-    group = "application"
-    mainClass = "dynamic_programming.FibonacciTab"
-    classpath = sourceSets.main.get().runtimeClasspath
-}
-
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
