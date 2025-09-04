@@ -1,0 +1,12 @@
+| Operation           | Description                  |
+| ------------------- | ---------------------------- |
+| DFS Traversals      | Preorder, Inorder, Postorder |
+| BFS Traversal       | Level Order                  |
+| Max/Min Depth       | Height of the tree           |
+| Invert Tree         | Swap left/right children     |
+| Search (BST)        | Look for a value             |
+| Insert/Delete (BST) | Add/remove values            |
+
+
+
+

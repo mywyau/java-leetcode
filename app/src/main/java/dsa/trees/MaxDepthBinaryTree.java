@@ -3,16 +3,17 @@ package dsa.trees;
 // Time & Space Complexity
 
 // Measure	Value
-// Time	O(n) — each node is visited once
+// Time	    O(n) — each node is visited once
 // Space	O(h) — height of the tree (due to recursion stack)
 
-// This is a post-order DFS traversal.
+
 // Recursion visits every node once.
 // Base case handles leaf children.
 // The 1 + Math.max(...) step builds up the answer as the call stack unwinds.
 
 public class MaxDepthBinaryTree {
 
+    // This is a post-order DFS traversal.
     public int maxDepth(TreeNode root) {
         if (root == null)
             return 0;
@@ -27,11 +28,11 @@ public class MaxDepthBinaryTree {
 
     public static void main(String[] args) {
         // Build sample tree:
-        // 1
-        // / \
-        // 2 3
-        // / \
-        // 4 5
+        //      1
+        //     /  \
+        //    2    3
+        //  /  \
+        // 4    5
 
         TreeNode root = 
             new TreeNode(

@@ -1,5 +1,8 @@
 package dsa.trees;
 
+
+// this is the definition of a tree node - we use this to define the tree
+
 public class TreeNode {
     int val;
     TreeNode left, right;

@@ -1,0 +1,166 @@
+
+📌 Arrays & Strings
+
+------------------------------------
+
+Two Sum (1) → hashing basics
+
+Best Time to Buy and Sell Stock (121) → max profit
+
+Product of Array Except Self (238) → prefix/suffix arrays
+
+Maximum Subarray (53) → Kadane’s algorithm
+
+Longest Substring Without Repeating Characters (3) → sliding window
+
+Container With Most Water (11) → two pointers
+
+Merge Intervals (56) → interval manipulation
+
+Insert Interval (57) → tricky variant
+
+📌 Linked Lists
+
+------------------------------------
+
+Reverse Linked List (206)
+
+Merge Two Sorted Lists (21)
+
+Linked List Cycle (141)
+
+Remove Nth Node From End of List (19)
+
+Reorder List (143)
+
+Add Two Numbers (2)
+
+📌 Stacks & Queues
+
+------------------------------------
+
+
+Valid Parentheses (20)
+
+Min Stack (155)
+
+Daily Temperatures (739) → monotonic stack
+
+Largest Rectangle in Histogram (84) → hard but common
+
+📌 Hashing & Sets
+
+------------------------------------
+
+
+Group Anagrams (49)
+
+Valid Anagram (242)
+
+Longest Consecutive Sequence (128)
+
+📌 Trees
+
+------------------------------------
+
+
+Maximum Depth of Binary Tree (104)
+
+Same Tree (100)
+
+Invert Binary Tree (226)
+
+Symmetric Tree (101)
+
+Binary Tree Level Order Traversal (102)
+
+Lowest Common Ancestor of a BST (235)
+
+Serialize and Deserialize Binary Tree (297) (hard)
+
+📌 Heaps / Priority Queue
+
+------------------------------------
+
+
+Kth Largest Element in an Array (215)
+
+Top K Frequent Elements (347)
+
+K Closest Points to Origin (973)
+
+Find Median from Data Stream (295)
+
+Merge k Sorted Lists (23)
+
+📌 Graphs
+
+------------------------------------
+
+
+Number of Islands (200) → BFS/DFS
+
+Clone Graph (133)
+
+Course Schedule (207) → topological sort
+
+Pacific Atlantic Water Flow (417)
+
+Word Ladder (127) → BFS
+
+Graph Valid Tree (261, Premium)
+
+📌 Dynamic Programming
+
+------------------------------------
+
+
+Climbing Stairs (70) → Fibonacci
+
+Coin Change (322)
+
+Longest Increasing Subsequence (300)
+
+Unique Paths (62)
+
+Word Break (139)
+
+Longest Palindromic Substring (5)
+
+Palindromic Substrings (647)
+
+Edit Distance (72)
+
+House Robber (198), House Robber II (213)
+
+📌 Backtracking
+
+------------------------------------
+
+
+Subsets (78)
+
+Permutations (46)
+
+Combination Sum (39)
+
+Word Search (79)
+
+N-Queens (51)
+
+📌 Advanced / Hard but Common
+
+------------------------------------
+
+
+Median of Two Sorted Arrays (4)
+
+Trapping Rain Water (42)
+
+Minimum Window Substring (76)
+
+LRU Cache (146)
+
+Regular Expression Matching (10)
+
+Wildcard Matching (44)

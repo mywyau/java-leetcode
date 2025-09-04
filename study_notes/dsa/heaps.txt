@@ -1,0 +1,10 @@
+Heaps are basically trees with rules
+
+Max heap parent is greater than all of it's children
+
+Min heap parent is less than all of it's children
+
+Rather than nodes, heaps are represented in terms of lists, in Java heap is implemented via PriorityQueue
+ - Java provides a PriorityQueue class, which is a Min-Heap by default.
+
+

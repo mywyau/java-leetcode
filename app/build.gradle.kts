@@ -49,6 +49,37 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+
+tasks.register("HeapExample", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.heaps.HeapExample"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("KthLargestElement215", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.heaps.KthLargestElement215"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("SymmetricTree", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.trees.SymmetricTree"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("InvertBinaryTree", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.trees.InvertBinaryTree"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("TreeTraversalExamples", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.trees.TreeTraversalExamples"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("Fibonacci", JavaExec::class) {
     group = "application"
     mainClass = "dsa.recursion.Fibonacci"
