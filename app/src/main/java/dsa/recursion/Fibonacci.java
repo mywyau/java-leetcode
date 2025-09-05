@@ -5,12 +5,11 @@ import java.util.Map;
 
 public class Fibonacci {
 
- //    | Method    | Time   | Space | Notes                          |
- //    | --------- | ------ | ----- | ------------------------------ |
- //    | Recursive | O(2^n) | O(n)  | Simple but slow                |
- //    | Memoized  | O(n)   | O(n)  | Fast, still uses recursion     |
- //    | Iterative | O(n)   | O(1)  | Fastest & most space-efficient |
-
+    // | Method | Time | Space | Notes |
+    // | --------- | ------ | ----- | ------------------------------ |
+    // | Recursive | O(2^n) | O(n) | Simple but slow |
+    // | Memoized | O(n) | O(n) | Fast, still uses recursion |
+    // | Iterative | O(n) | O(1) | Fastest & most space-efficient |
 
     public int fibonnaci(int n) {
         if (n == 0)
@@ -58,15 +57,15 @@ public class Fibonacci {
         return prev1;
     }
 
-public static void main(String[] args) {
-    Fibonacci f = new Fibonacci();
-    int resultRecursive = f.fibonnaci(6);
-    int resultMemo = f.fibMemoized(6);
-    int resultIter = f.fibIterative(6);
-    
-    System.out.println("Recursive: " + resultRecursive);
-    System.out.println("Memoized: " + resultMemo);
-    System.out.println("Iterative: " + resultIter);
-}
+    public static void main(String[] args) {
+        Fibonacci f = new Fibonacci();
+        int resultRecursive = f.fibonnaci(6);
+        int resultMemo = f.fibMemoized(6);
+        int resultIter = f.fibIterative(6);
+
+        System.out.println("Recursive: " + resultRecursive);
+        System.out.println("Memoized: " + resultMemo);
+        System.out.println("Iterative: " + resultIter);
+    }
 
 }
