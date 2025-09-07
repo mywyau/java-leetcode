@@ -6,8 +6,8 @@ import java.util.Set;
 public class ContainsDuplicate {
 
     // bad
-    // ❌ Time: O(n²)
-    // ❌ Space: O(1)
+    // Time: O(n²)
+    // Space: O(1)
 
     public boolean containsDuplicateBruteForce(int[] nums) {
         for (int i = 0; i < nums.length; i++) {

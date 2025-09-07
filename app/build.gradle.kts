@@ -49,6 +49,13 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+
+tasks.register("ReversedLinkedList", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.linked_list.ReversedLinkedList"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("BasicArrays", JavaExec::class) {
     group = "application"
     mainClass = "dsa.arrays.BasicArrays"

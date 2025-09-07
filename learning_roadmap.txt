@@ -1,0 +1,218 @@
+Core Set (≈75 problems)
+Arrays & Strings (+ hashing / intervals)
+
+Two Sum
+
+Best Time to Buy and Sell Stock
+
+Maximum Subarray (Kadane)
+
+Product of Array Except Self
+
+Subarray Sum Equals K
+
+Maximum Product Subarray
+
+Container With Most Water
+
+3Sum
+
+Group Anagrams
+
+Valid Anagram
+
+Longest Consecutive Sequence
+
+Longest Substring Without Repeating Characters (sliding window)
+
+Minimum Window Substring (sliding window)
+
+Merge Intervals
+
+Insert Interval
+
+Decode String
+
+Sliding Window Maximum (deque)
+
+Linked Lists
+
+Reverse Linked List
+
+Merge Two Sorted Lists
+
+Linked List Cycle
+
+Linked List Cycle II
+
+Remove Nth Node From End of List
+
+Add Two Numbers
+
+Reorder List
+
+Merge k Sorted Lists (heap)
+
+Stacks / Monotonic Structures
+
+Valid Parentheses
+
+Min Stack
+
+Daily Temperatures (monotonic stack)
+
+Largest Rectangle in Histogram
+
+Longest Valid Parentheses
+
+Trees (DFS/BFS, recursion)
+
+Maximum Depth of Binary Tree
+
+Same Tree
+
+Symmetric Tree
+
+Invert Binary Tree
+
+Binary Tree Level Order Traversal
+
+Validate Binary Search Tree
+
+Kth Smallest Element in a BST
+
+Lowest Common Ancestor of a BST
+
+Lowest Common Ancestor of a Binary Tree
+
+Binary Tree Maximum Path Sum
+
+Serialize and Deserialize Binary Tree
+
+Heaps / Priority Queue
+
+Kth Largest Element in an Array
+
+Top K Frequent Elements
+
+K Closest Points to Origin
+
+Find Median from Data Stream (two heaps)
+
+Task Scheduler
+
+Meeting Rooms II (Premium—optional)
+
+Graphs (BFS/DFS/Topo)
+
+Number of Islands
+
+Clone Graph
+
+Course Schedule (topo sort)
+
+Course Schedule II (topo sort)
+
+Pacific Atlantic Water Flow
+
+Word Ladder (BFS)
+
+Rotting Oranges
+
+Evaluate Division (graph + DFS)
+
+Dynamic Programming
+
+Climbing Stairs
+
+House Robber
+
+House Robber II
+
+Coin Change
+
+Longest Increasing Subsequence
+
+Longest Common Subsequence
+
+Longest Palindromic Substring
+
+Palindromic Substrings
+
+Word Break
+
+Edit Distance
+
+Partition Equal Subset Sum
+
+Unique Paths
+
+Minimum Path Sum
+
+Backtracking
+
+Subsets
+
+Subsets II
+
+Permutations
+
+Permutations II
+
+Combination Sum
+
+Combination Sum II
+
+Palindrome Partitioning
+
+Word Search
+
+Design / Tries (common systems-ish)
+
+LRU Cache
+
+Implement Trie (Prefix Tree)
+
+Add and Search Word – Data structure design
+
+Stretch Set (pick as needed)
+
+Trapping Rain Water (two pointers/stack)
+
+Median of Two Sorted Arrays (divide & conquer)
+
+Alien Dictionary (Premium; topo)
+
+Word Search II (Trie + backtracking)
+
+Maximal Rectangle (stack + DP)
+
+297 already in core (great practice)
+
+Valid Parenthesis String (greedy)
+
+Remove Invalid Parentheses (BFS/backtracking)
+
+Sort Colors (Dutch National Flag)
+
+Search in Rotated Sorted Array (binary search variant)
+
+Find First and Last Position… (binary search boundaries)
+
+Find Minimum in Rotated Sorted Array
+
+76 already in core (great)
+
+560 already in core (prefix sums)
+
+Insert Delete GetRandom O(1) (design)
+
+Time Based Key-Value Store (design)
+
+124 already in core (hard tree)
+
+Split Array Largest Sum (binary search on answer)
+
+Minimum Number of Refueling Stops (heap/greedy)
+
+Smallest Range Covering Elements from K Lists (heap)
