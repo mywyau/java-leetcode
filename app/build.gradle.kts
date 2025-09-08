@@ -50,6 +50,13 @@ java {
 // }
 
 
+
+tasks.register("LinkedListCycle", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.linked_list.LinkedListCycle"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("ReversedLinkedList", JavaExec::class) {
     group = "application"
     mainClass = "dsa.linked_list.ReversedLinkedList"
@@ -122,7 +129,6 @@ tasks.register("MaxSumSubarray", JavaExec::class) {
     classpath = sourceSets.main.get().runtimeClasspath
 }
 
-
 tasks.register("TwoSum", JavaExec::class) {
     group = "application"
     mainClass = "leetcode.easy.TwoSum"
@@ -147,13 +153,11 @@ tasks.register("MergeTwoSortedLists", JavaExec::class) {
     classpath = sourceSets.main.get().runtimeClasspath
 }
 
-
 tasks.register("MergeStrings", JavaExec::class) {
     group = "application"
     mainClass = "leetcode.easy.MergeStrings"
     classpath = sourceSets.main.get().runtimeClasspath
 }
-
 
 tasks.register("RomanNumerals", JavaExec::class) {
     group = "application"
