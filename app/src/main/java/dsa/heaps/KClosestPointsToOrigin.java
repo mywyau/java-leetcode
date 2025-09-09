@@ -2,7 +2,7 @@ package dsa.heaps;
 
 import java.util.PriorityQueue;
 
-public class KClosestPoints {
+public class KClosestPointsToOrigin {
 
     public int[][] kClosest(int[][] points, int k) {
         // Max-heap based on distance

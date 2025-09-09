@@ -49,7 +49,17 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("LinearSearchExample", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.searching.LinearSearchExample"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
 
+tasks.register("MedianFinder", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.heaps.MedianFinder"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
 
 tasks.register("LinkedListCycle", JavaExec::class) {
     group = "application"
