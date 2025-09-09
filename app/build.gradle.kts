@@ -137,7 +137,7 @@ tasks.register("TwoSum", JavaExec::class) {
 
 tasks.register("AddTwoNumbers", JavaExec::class) {
     group = "application"
-    mainClass = "leetcode.medium.addTwoNumbers.AddTwoNumbers"
+    mainClass = "dsa.linked_list.AddTwoNumbers"
     classpath = sourceSets.main.get().runtimeClasspath
 }
 

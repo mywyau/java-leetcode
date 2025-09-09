@@ -1,4 +1,4 @@
-package leetcode.easy.linked_lists;
+package dsa.linked_list;
 
 // Input:
 // l1 = 2 → 4 → 3   (represents 342)
