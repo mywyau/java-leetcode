@@ -10,8 +10,7 @@ public class QuickSortExample {
         arr[j] = tmp;
     }
 
-    private int partition(int arr[], int left, int right) {
-
+    private int partition(int[] arr, int left, int right) {
         int pivot = arr[right];
         int i = left - 1;
 
@@ -26,19 +25,32 @@ public class QuickSortExample {
         return i + 1;
     }
 
-    public void quickSort(int[] arr, int left, int right) {
+    // Internal recursive method
+    private void quickSortRecursive(int[] arr, int left, int right) {
         if (left < right) {
             int pivotIndex = partition(arr, left, right);
-            quickSort(arr, left, pivotIndex - 1);
-            quickSort(arr, pivotIndex + 1, right);
+            quickSortRecursive(arr, left, pivotIndex - 1);
+            quickSortRecursive(arr, pivotIndex + 1, right);
         }
     }
 
-    // Demo
-    public static void main(String[] args) {
-        QuickSortExample qs = new QuickSortExample();
-        int[] arr = { 6, 3, 8, 5, 2, 7, 4, 1 };
-        qs.quickSort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.toString(arr)); // [1,2,3,4,5,6,7,8]
+    // Public method with no left/right
+    public int[] quickSort(int[] arr) {
+        if (arr == null || arr.length < 2)
+            return arr;
+        quickSortRecursive(arr, 0, arr.length - 1);
+        return arr;
     }
+
+    public static void main(String[] args) {
+        
+        QuickSortExample qs = new QuickSortExample();
+
+        int[] arr = { 6, 3, 8, 5, 2, 7, 4, 1 };
+        int[] sorted = qs.quickSort(arr); // ✅ assign the returned sorted array
+
+        System.out.println(Arrays.toString(arr)); // original array (now sorted in-place)
+        System.out.println(Arrays.toString(sorted)); // sorted array (same as arr)
+    }
+
 }

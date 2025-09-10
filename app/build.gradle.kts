@@ -49,6 +49,12 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("BinarySearchExample2", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.searching.BinarySearchExample2"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("BinarySearchExample", JavaExec::class) {
     group = "application"
     mainClass = "dsa.searching.BinarySearchExample"
