@@ -43,14 +43,14 @@ public class QuickSortExample {
     }
 
     public static void main(String[] args) {
-        
+
         QuickSortExample qs = new QuickSortExample();
 
         int[] arr = { 6, 3, 8, 5, 2, 7, 4, 1 };
         int[] sorted = qs.quickSort(arr); // ✅ assign the returned sorted array
 
-        System.out.println(Arrays.toString(arr)); // original array (now sorted in-place)
-        System.out.println(Arrays.toString(sorted)); // sorted array (same as arr)
+        System.out.println("Original: " + Arrays.toString(arr)); // original array (now sorted in-place)
+        System.out.println("Sorted: " + Arrays.toString(sorted)); // sorted array (same as arr)
     }
 
 }
