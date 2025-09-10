@@ -2,6 +2,10 @@ package dsa.sorting;
 
 import java.util.Arrays;
 
+// Average Time Complexity: O(n log n)
+// Space Complexity: O(log n) (due to recursion)
+// Efficient for large arrays (up to 50,000 elements)
+
 public class QuickSortExample {
 
     private void swap(int[] arr, int i, int j) {
