@@ -1,6 +1,7 @@
 package dsa.sorting;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 // Average Time Complexity: O(n log n)
 // Space Complexity: O(log n) (due to recursion)
@@ -45,6 +46,30 @@ public class QuickSortExample {
         quickSortRecursive(arr, 0, arr.length - 1);
         return arr;
     }
+
+
+    public int[] quickSortIterative(int[] arr) {
+        
+        if (arr == null || arr.length < 2) return arr;
+
+        Stack<int[]> stack = new Stack<>();
+        stack.push(new int[]{0, arr.length - 1});
+
+        while (!stack.isEmpty()) {
+            int[] range = stack.pop();
+            int left = range[0];
+            int right = range[1];
+
+            if (left < right) {
+                int pivotIndex = partition(arr, left, right);
+                stack.push(new int[]{left, pivotIndex - 1});
+                stack.push(new int[]{pivotIndex + 1, right});
+            }
+        }
+
+        return arr;
+    }
+
 
     public static void main(String[] args) {
 
