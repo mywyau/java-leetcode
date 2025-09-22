@@ -5,31 +5,31 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import dsa.hash_set.ContainsDuplicate;
+import dsa.arrays.ContainsDuplicate217;
 
-public class ContainsDuplicateSpec {
+public class ContainsDuplicate217Spec {
 
     @Test
     void testWithNoDuplicatesBrute() {
-        ContainsDuplicate solver = new ContainsDuplicate();
+        ContainsDuplicate217 solver = new ContainsDuplicate217();
         assertFalse(solver.containsDuplicateBruteForce(new int[] { 1, 2, 3, 4 }));
     }
 
     @Test
     void testWithDuplicatesBrute() {
-        ContainsDuplicate solver = new ContainsDuplicate();
+        ContainsDuplicate217 solver = new ContainsDuplicate217();
         assertTrue(solver.containsDuplicateBruteForce(new int[] { 1, 2, 3, 1 }));
     }
 
     @Test
     void testWithNoDuplicates() {
-        ContainsDuplicate solver = new ContainsDuplicate();
+        ContainsDuplicate217 solver = new ContainsDuplicate217();
         assertFalse(solver.containsDuplicate(new int[] { 1, 2, 3, 4 }));
     }
 
     @Test
     void testWithDuplicates() {
-        ContainsDuplicate solver = new ContainsDuplicate();
+        ContainsDuplicate217 solver = new ContainsDuplicate217();
         assertTrue(solver.containsDuplicate(new int[] { 1, 2, 3, 1 }));
     }
 }

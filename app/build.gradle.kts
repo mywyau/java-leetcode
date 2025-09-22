@@ -49,6 +49,19 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("MinSubArrayLenExample", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.arrays.sliding_window.MinSubArrayLenExample"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+
+tasks.register("ContainsDuplicate217", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.arrays.ContainsDuplicate217"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("BinarySearchExample2", JavaExec::class) {
     group = "application"
     mainClass = "dsa.searching.BinarySearchExample2"

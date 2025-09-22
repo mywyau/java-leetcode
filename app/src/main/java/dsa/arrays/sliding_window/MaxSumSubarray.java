@@ -47,6 +47,7 @@ public class MaxSumSubarray {
     }
 
     public static void main(String[] args) {
+        
         MaxSumSubarray maxSum = new MaxSumSubarray();
 
         int[] nums = generateLargeArray(1_000_000); // try with 1M elements
