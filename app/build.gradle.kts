@@ -49,6 +49,13 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("BFSTraversalsExample", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.binary_trees.BFSTraversalsExample"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+
 tasks.register("MinSubArrayLenExample", JavaExec::class) {
     group = "application"
     mainClass = "dsa.arrays.sliding_window.MinSubArrayLenExample"
