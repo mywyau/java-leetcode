@@ -1,16 +1,29 @@
-package dsa.arrays.sliding_window;
+package dsa.sliding_window;
 
 import java.util.Random;
 
+// Maximum Average Subarray I (LeetCode 643)
 
-public class MaxSumSubarray {
+public class MaxAverageSubarray {
+
+    public double maxAverageSubarrayBruteForce(int[] nums, int k) {
+        double maxSum = 0;
+        for (int i = 0; i <= nums.length - k; i++) {
+            int sum = 0;
+            for (int j = i; j < i + k; j++) {
+                sum += nums[j];
+            }
+            maxSum = Math.max(maxSum, sum);
+        }
+        return maxSum / k;
+    }
 
     // Fixed sliding window algorithm, basically improved brute force
 
-    public int maxSumSubarray(int[] nums, int k) {
+    public double maxAverageSubarray(int[] nums, int k) {
 
-        int windowSum = 0;
-        int maxSum = 0;
+        double windowSum = 0;
+        double maxSum = 0;
 
         for (int i = 0; i < k; i++) {
             windowSum += nums[i];
@@ -22,19 +35,8 @@ public class MaxSumSubarray {
             windowSum += nums[end] - nums[end - k];
             maxSum = Math.max(maxSum, windowSum);
         }
-        return maxSum;
-    }
 
-    public int maxSumSubarray2BruteForce(int[] nums, int k) {
-        int maxSum = 0;
-        for (int i = 0; i <= nums.length - k; i++) {
-            int sum = 0;
-            for (int j = i; j < i + k; j++) {
-                sum += nums[j];
-            }
-            maxSum = Math.max(maxSum, sum);
-        }
-        return maxSum;
+        return maxSum / k;
     }
 
     private static int[] generateLargeArray(int size) {
@@ -47,28 +49,27 @@ public class MaxSumSubarray {
     }
 
     public static void main(String[] args) {
-        
-        MaxSumSubarray maxSum = new MaxSumSubarray();
+
+        MaxAverageSubarray maxSum = new MaxAverageSubarray();
 
         int[] nums = generateLargeArray(1_000_000); // try with 1M elements
         int k = 500;
 
         // Brute Force Timing
         long startBrute = System.nanoTime();
-        int bruteResult = maxSum.maxSumSubarray2BruteForce(nums, k);
+        double bruteResult = maxSum.maxAverageSubarrayBruteForce(nums, k);
         long endBrute = System.nanoTime();
         System.out.println("Brute Force Result: " + bruteResult);
         System.out.println("Brute Force Time: " + ((endBrute - startBrute) / 1_000_000.0) + " ms");
 
         // Sliding Window Timing
         long startSliding = System.nanoTime();
-        int slidingResult = maxSum.maxSumSubarray(nums, k);
+        double slidingResult = maxSum.maxAverageSubarray(nums, k);
         long endSliding = System.nanoTime();
         System.out.println("Sliding Window Result: " + slidingResult);
         System.out.println("Sliding Window Time: " + ((endSliding - startSliding) / 1_000_000.0) + " ms");
     }
 }
-
 
 // > Task :app:MaxSumSubarray
 // Brute Force Result: 27414

@@ -49,6 +49,18 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("AverageOfSubarrayOverThreshold", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.sliding_window.AverageOfSubarrayOverThreshold"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("MaxAverageSubarray", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.sliding_window.MaxAverageSubarray"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("BFSTraversalsExample", JavaExec::class) {
     group = "application"
     mainClass = "dsa.binary_trees.BFSTraversalsExample"
