@@ -1,0 +1,60 @@
+🔹 How to Recognize Big-O Quickly
+1. Look at the loops
+
+Single loop over n items → usually O(n).
+
+Nested loops (loop inside loop) → usually O(n²).
+
+Triple nested loops → O(n³).
+
+Loop that halves the input each time (like binary search) → O(log n).
+
+Loop over n + another independent loop over m → O(n + m).
+
+2. Look at the work per loop
+
+If each iteration does constant work (add, compare, assign) → O(1) per iteration.
+
+If each iteration itself calls a loop of size k, total = O(n × k).
+
+If each iteration makes recursive calls, analyze the recurrence (e.g., mergesort = O(n log n)).
+
+3. Common Data Structure Operations
+
+Array access by index = O(1)
+
+Array search (linear) = O(n)
+
+Binary search (sorted array) = O(log n)
+
+HashMap put/get = O(1) average, O(n) worst case
+
+Tree operations (balanced BST) = O(log n)
+
+4. Spotting from Patterns
+
+Some classic patterns have “default” complexities:
+
+Sliding Window = O(n)
+
+Two Pointers = O(n)
+
+Binary Search = O(log n)
+
+DFS/BFS = O(V + E) (vertices + edges)
+
+Sorting = O(n log n)
+
+Dynamic Programming (1D) = O(n) or O(n²)
+
+DP (2D grid) = O(m × n)
+
+5. Simplify the Expression
+
+Big-O drops constants and lower terms:
+
+O(2n) → O(n)
+
+O(n + n²) → O(n²)
+
+O(n log n + n) → O(n log n)

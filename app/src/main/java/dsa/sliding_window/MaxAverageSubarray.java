@@ -6,6 +6,8 @@ import java.util.Random;
 
 public class MaxAverageSubarray {
 
+    // Time complexity = O(n × k)  -  since k is a fixed size and is not variable it is not n^2 - worst case k is n^2 somehow and calculated elsewhere and is dynamic.
+    // Space complexity = O(1)
     public double maxAverageSubarrayBruteForce(int[] nums, int k) {
         double maxSum = 0;
         for (int i = 0; i <= nums.length - k; i++) {
