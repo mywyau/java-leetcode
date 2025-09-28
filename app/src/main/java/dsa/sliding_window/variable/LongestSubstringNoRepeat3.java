@@ -31,25 +31,49 @@ public class LongestSubstringNoRepeat3 {
         return maxLen;
     }
 
-    // Set is easier to remember 
+    // Set is easier to remember
 
     public int lengthOfLongestSubstringHashSet(String s) {
 
         Set<Character> seen = new HashSet<>(); // Keeps track of unique characters in the current window.
 
         int maxLen = 0; // stores the longest valid substring length.
-        int start = 0; // left boundary of the window.
+        int left = 0; // left boundary of the window.
 
         for (int end = 0; end < s.length(); end++) { // end is the right boundary of the window.
             char rightChar = s.charAt(end); // We expand the window by adding rightChar.
 
             while (seen.contains(rightChar)) {
-                seen.remove(s.charAt(start));
-                start++;
+                seen.remove(s.charAt(left));
+                left++;
             }
 
             seen.add(rightChar); // Add the current character to the window.
-            maxLen = Math.max(maxLen, end - start + 1); // Update maxLen with the current window length if it's longer.
+            maxLen = Math.max(maxLen, end - left + 1); // Update maxLen with the current window length if it's longer.
+        }
+
+        return maxLen;
+    }
+
+    // number 3
+
+    public int lengthOfLongestSubstringHashSet2(String s) {
+
+        Set<Character> seen = new HashSet<>();
+
+        int left = 0;
+        int maxLen = 0;
+
+        for (int end = 0; end < s.length(); end++) { // often a for loop
+            char rightChar = s.charAt(end);
+
+            while (seen.contains(rightChar)) { // window invalid // often a while loop within the for
+                seen.remove(s.charAt(left));
+                left++; // increment the left pointer / start
+            }
+
+            seen.add(rightChar); // update the acc
+            maxLen = Math.max(maxLen, end - left + 1); // determine the answer/return
         }
 
         return maxLen;
