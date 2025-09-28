@@ -49,6 +49,18 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("LongestSubstringNoRepeat3", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.sliding_window.variable.LongestSubstringNoRepeat3"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("MinSizedSubarray209", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.sliding_window.variable.MinSizedSubarray209"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("AverageOfSubarrayOverThreshold", JavaExec::class) {
     group = "application"
     mainClass = "dsa.sliding_window.AverageOfSubarrayOverThreshold"

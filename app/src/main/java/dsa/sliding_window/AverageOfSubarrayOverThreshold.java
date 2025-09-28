@@ -6,8 +6,6 @@ import java.util.Arrays;
 
  // k = 3
 
-
-
 public class AverageOfSubarrayOverThreshold {
 
     public int averageOfSubarrayOverThreshold(int[] nums, int k, int threshold) {
