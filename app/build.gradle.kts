@@ -49,6 +49,12 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("LongestSubstringKDistinctCharacters", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.sliding_window.variable.LongestSubstringKDistinctCharacters"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("MaximumConsecutiveOnesIII1004", JavaExec::class) {
     group = "application"
     mainClass = "dsa.sliding_window.variable.MaximumConsecutiveOnesIII1004"
