@@ -17,6 +17,14 @@ import java.util.Arrays;
  * Valid part is nums[0..3] = [0,1,2,3].
  */
 
+
+//  LeetCode 26. Remove Duplicates from Sorted Array
+
+// Given: A sorted array nums.
+// Task: Remove the duplicates in-place such that each unique element appears only once, and return the new length.
+// Constraints: O(1) extra memory (in-place).
+// Note: It doesn’t matter what you leave beyond the returned length.
+
 public class RemoveDuplicates {
 
     /**

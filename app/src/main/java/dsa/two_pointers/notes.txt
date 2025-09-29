@@ -1,0 +1,56 @@
+
+General Two-Pointer Pattern
+
+Two pointers are just two indices (or iterators) moving over the same structure (usually an array or string).
+The trick is: move one or both pointers intelligently to reduce complexity from O(n²) to O(n).
+
+Common Patterns
+
+1. Opposite Ends (Converging Pointers)
+
+Start one pointer at the left and one at the right.
+
+Move them toward each other depending on conditions.
+
+Used for:
+
+Palindrome checking
+
+Container With Most Water
+
+Two Sum II (sorted array)
+
+Template:
+
+int left = 0;
+int right = arr.length - 1;
+while (left < right) {
+    if (condition) {
+        left++;   // or right--
+    } else {
+        right--;  // or left++
+    }
+}
+
+2. Same Direction (Fast & Slow pointers)
+
+Both pointers move forward, but at different speeds.
+
+Used for:
+
+Detecting cycles in linked lists (Floyd’s algorithm)
+
+Sliding window problems
+
+Removing duplicates from sorted arrays
+
+Template:
+
+int slow = 0;
+for (int fast = 1; fast < arr.length; fast++) {
+    if (arr[fast] != arr[slow]) {
+        slow++;
+        arr[slow] = arr[fast];
+    }
+}
+return slow + 1;

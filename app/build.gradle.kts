@@ -49,6 +49,14 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+
+tasks.register("ValidPalindrome", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.two_pointers.ValidPalindrome"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+
 tasks.register("RemoveDuplicates", JavaExec::class) {
     group = "application"
     mainClass = "dsa.two_pointers.RemoveDuplicates"
