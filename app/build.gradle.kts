@@ -50,12 +50,17 @@ java {
 // }
 
 
+tasks.register("ReverseWordsExample", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.two_pointers.ReverseWordsExample"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("ValidPalindrome", JavaExec::class) {
     group = "application"
     mainClass = "dsa.two_pointers.ValidPalindrome"
     classpath = sourceSets.main.get().runtimeClasspath
 }
-
 
 tasks.register("RemoveDuplicates", JavaExec::class) {
     group = "application"
