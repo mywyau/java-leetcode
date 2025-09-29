@@ -49,6 +49,12 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("ColourTwoPointers", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.two_pointers.ColourTwoPointers"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("LongestSubstringKDistinctCharacters", JavaExec::class) {
     group = "application"
     mainClass = "dsa.sliding_window.variable.LongestSubstringKDistinctCharacters"
