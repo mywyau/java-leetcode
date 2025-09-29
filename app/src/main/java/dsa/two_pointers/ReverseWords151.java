@@ -9,6 +9,26 @@ package dsa.two_pointers;
 
 public class ReverseWords151 {
 
+    // this is possibly the better interview implementation, showcases two pointer approach
+    public static String reverseWordsTwoPointers(String sentence) {
+        
+        sentence = sentence.trim();
+        String[] words = sentence.split("\\s+");
+        
+        int left = 0;
+        int right = words.length - 1;
+
+        while (left < right) {
+            String temp = words[left];
+            words[left] = words[right];
+            words[right] = temp;
+            left++;
+            right--;
+        }
+
+        return String.join(" ", words);
+    }
+
     public String reverseWords(String s) {
         // Step 1: trim and split by spaces
         String[] words = s.trim().split("\\s+");
