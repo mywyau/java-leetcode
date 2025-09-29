@@ -49,6 +49,12 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("RemoveDuplicates", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.two_pointers.RemoveDuplicates"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("ColourTwoPointers", JavaExec::class) {
     group = "application"
     mainClass = "dsa.two_pointers.ColourTwoPointers"
