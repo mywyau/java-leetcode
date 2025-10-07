@@ -15,6 +15,7 @@ package leetcode.easy;
  * - The maximum profit if we sell today (price - minPrice)
  * - Time: O(n), Space: O(1)
  */
+
 public class BestTimeBuySellStock {
 
     // Optimal solution using greedy one-pass strategy

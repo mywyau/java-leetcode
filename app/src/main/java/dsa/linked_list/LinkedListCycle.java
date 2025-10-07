@@ -3,6 +3,8 @@ package dsa.linked_list;
 import java.util.HashSet;
 import java.util.Set;
 
+// slow and fast pointers
+
 public class LinkedListCycle {
 
     // Given a linked list, determine if it has a cycle.

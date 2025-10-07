@@ -49,6 +49,13 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("HappyNumber202", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.fast_and_slow_pointers.HappyNumber202"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+
 tasks.register("BinarySearch", JavaExec::class) {
     group = "application"
     mainClass = "dsa.BinarySearch"
@@ -112,13 +119,13 @@ tasks.register("MinSizedSubarray209", JavaExec::class) {
 
 tasks.register("AverageOfSubarrayOverThreshold", JavaExec::class) {
     group = "application"
-    mainClass = "dsa.sliding_window.AverageOfSubarrayOverThreshold"
+    mainClass = "dsa.sliding_window.fixed.AverageOfSubarrayOverThreshold"
     classpath = sourceSets.main.get().runtimeClasspath
 }
 
 tasks.register("MaxAverageSubarray", JavaExec::class) {
     group = "application"
-    mainClass = "dsa.sliding_window.MaxAverageSubarray"
+    mainClass = "dsa.sliding_window.fixed.MaxAverageSubarray"
     classpath = sourceSets.main.get().runtimeClasspath
 }
 
@@ -128,13 +135,11 @@ tasks.register("BFSTraversalsExample", JavaExec::class) {
     classpath = sourceSets.main.get().runtimeClasspath
 }
 
-
 tasks.register("MinSubArrayLenExample", JavaExec::class) {
     group = "application"
-    mainClass = "dsa.arrays.sliding_window.MinSubArrayLenExample"
+    mainClass = "dsa.sliding_window.fixed.MinSubArrayLenExample"
     classpath = sourceSets.main.get().runtimeClasspath
 }
-
 
 tasks.register("ContainsDuplicate217", JavaExec::class) {
     group = "application"
