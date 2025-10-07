@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import dsa.sliding_window.MaxSumSubarray;
+import dsa.sliding_window.fixed.MaxSumSubarray;
 
 public class MaxSumSubarraySpec {
 

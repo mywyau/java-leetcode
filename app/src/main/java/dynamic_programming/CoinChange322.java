@@ -1,11 +1,14 @@
 package dynamic_programming;
 
-import java.util.*;
+import java.util.Arrays;
 
-public class CoinChange {
+public class CoinChange322 {
+
     public int coinChange(int[] coins, int amount) {
+
         int INF = amount + 1;
         int[] dp = new int[amount + 1];
+
         Arrays.fill(dp, INF);
         dp[0] = 0;
 
@@ -17,11 +20,11 @@ public class CoinChange {
                 }
             }
         }
-        return dp[amount] > amount ? -1 : dp[amount];
+        return dp[amount] > amount ? -1 : dp[amount]; // ternary operator I think
     }
 
     public static void main(String[] args) {
-        CoinChange solver = new CoinChange();
-        System.out.println(solver.coinChange(new int[]{1,2,5}, 11)); // 3 (5+5+1)
+        CoinChange322 solver = new CoinChange322();
+        System.out.println(solver.coinChange(new int[] { 1, 2, 5 }, 11)); // 3 (5+5+1)
     }
 }
