@@ -49,6 +49,12 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("LoopExamples", JavaExec::class) {
+    group = "application"
+    mainClass = "basics.loops.LoopExamples"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("HappyNumber202", JavaExec::class) {
     group = "application"
     mainClass = "dsa.fast_and_slow_pointers.HappyNumber202"
