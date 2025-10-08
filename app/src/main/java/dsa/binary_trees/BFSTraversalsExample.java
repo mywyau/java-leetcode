@@ -16,6 +16,7 @@ public class BFSTraversalsExample {
      */
 
     public TreeNode demoTree() {
+        
         TreeNode n6 = new TreeNode(6);
         TreeNode n5 = new TreeNode(5);
         TreeNode n4 = new TreeNode(4);

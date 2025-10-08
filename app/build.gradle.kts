@@ -49,6 +49,43 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("StringBasics", JavaExec::class) {
+    group = "application"
+    mainClass = "basics.strings.StringBasics"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("InsertionSort", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.sorting.InsertionSort"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("MergeSortExample", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.sorting.MergeSortExample"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("IfElseExamples", JavaExec::class) {
+    group = "application"
+    mainClass = "basics.conditions.IfElseExamples"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+
+tasks.register("SwitchCases", JavaExec::class) {
+    group = "application"
+    mainClass = "basics.switch_cases.SwitchCases"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
+tasks.register("LoopExamples", JavaExec::class) {
+    group = "application"
+    mainClass = "basics.loops.LoopExamples"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("HappyNumber202", JavaExec::class) {
     group = "application"
     mainClass = "dsa.fast_and_slow_pointers.HappyNumber202"
