@@ -3,6 +3,8 @@ package dsa.sorting;
 import java.util.Arrays;
 import java.util.Stack;
 
+// Quick Sort is a divide and conquer algorithm:
+
 // Average Time Complexity: O(n log n)
 // Space Complexity: O(log n) (due to recursion)
 // Efficient for large arrays (up to 50,000 elements)
