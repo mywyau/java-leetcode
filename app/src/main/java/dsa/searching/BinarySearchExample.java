@@ -10,8 +10,7 @@ public class BinarySearchExample {
 
     public int binarySearch(int[] arr, int target) {
 
-        // we want to use two pointers for this search - not the same as the two pointer
-        // technique
+        // we want to use two pointers for this search - not the same as the two pointer technique
         int left = 0; // initialise left pointer - beginning of array
         int right = arr.length - 1; // initialise right pointer - end of array
 

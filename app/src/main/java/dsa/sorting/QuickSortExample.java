@@ -49,13 +49,29 @@ public class QuickSortExample {
         return arr;
     }
 
+    // Both recursive and iterative (non-recursive) QuickSort algorithms:
+
+    // Have the same time complexity:
+    // Average: O(n log n)
+    // Worst: O(n²)
+    // Have the same space complexity asymptotically: O(log n)
+
+    // But how that space is used is different.
+    // The only real difference is:
+    // The recursive version uses the call stack for subproblems.
+    // The iterative version uses an explicit stack (Stack<int[]>) you manage
+    // manually.
+
+    // They perform identically in logic and output.
+    // The iterative one just makes the recursion explicit.
 
     public int[] quickSortIterative(int[] arr) {
-        
-        if (arr == null || arr.length < 2) return arr;
+
+        if (arr == null || arr.length < 2)
+            return arr;
 
         Stack<int[]> stack = new Stack<>();
-        stack.push(new int[]{0, arr.length - 1});
+        stack.push(new int[] { 0, arr.length - 1 });
 
         while (!stack.isEmpty()) {
             int[] range = stack.pop();
@@ -64,14 +80,13 @@ public class QuickSortExample {
 
             if (left < right) {
                 int pivotIndex = partition(arr, left, right);
-                stack.push(new int[]{left, pivotIndex - 1});
-                stack.push(new int[]{pivotIndex + 1, right});
+                stack.push(new int[] { left, pivotIndex - 1 });
+                stack.push(new int[] { pivotIndex + 1, right });
             }
         }
 
         return arr;
     }
-
 
     public static void main(String[] args) {
 
