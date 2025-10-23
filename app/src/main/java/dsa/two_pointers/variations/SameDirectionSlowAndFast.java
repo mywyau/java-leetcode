@@ -45,9 +45,8 @@ public class SameDirectionSlowAndFast {
         int[] nums = { 2, 7, 11, 15 };
         int target = 9;
 
-        int[] result = hasCycle(nums, target);
-        System.out.println("Indices: " + Arrays.toString(result));
-        System.out.println("Values: " + nums[result[0]] + " + " + nums[result[1]] + " = " + target);
+        // boolean result = hasCycle(nums, target);
+        // System.out.println("Indices: " + result);
     }
 
 }

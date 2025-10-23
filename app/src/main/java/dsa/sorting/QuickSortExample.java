@@ -93,7 +93,9 @@ public class QuickSortExample {
         QuickSortExample qs = new QuickSortExample();
 
         int[] arr = { 6, 3, 8, 5, 2, 7, 4, 1 };
-        int[] sorted = qs.quickSort(arr); // ✅ assign the returned sorted array
+
+        int[] copy = Arrays.copyOf(arr, arr.length); // we need to make a copy first to sort otherwise it will mutate the other list
+        int[] sorted = qs.quickSort(copy);
 
         System.out.println("Original: " + Arrays.toString(arr)); // original array (now sorted in-place)
         System.out.println("Sorted: " + Arrays.toString(sorted)); // sorted array (same as arr)
