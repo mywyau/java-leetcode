@@ -1,11 +1,5 @@
 package dsa.two_pointers.variations;
 
-import java.util.Arrays;
-
-// Used when:
-// You’re working with linked lists or arrays
-// You need to detect cycles, find midpoints, or remove duplicates
-
 class ListNode {
 
     int val;
@@ -30,23 +24,43 @@ public class SameDirectionSlowAndFast {
         ListNode slow = head;
         ListNode fast = head.next;
 
+        int step = 0;
         while (fast != null && fast.next != null) {
-            if (slow == fast)
-                return true; // cycle detected
+            System.out.printf("Step %d -> slow: %d, fast: %d%n", step, slow.val, fast.val);
+            if (slow == fast) {
+                System.out.println("Cycle detected!");
+                return true;
+            }
             slow = slow.next;
             fast = fast.next.next; // fast moves twice as fast
+            step++;
         }
 
+        System.out.println("No cycle detected.");
         return false;
     }
 
     public static void main(String[] args) {
+        
+        // Example 1: No cycle
+        ListNode head1 = new ListNode(1);
+        head1.next = new ListNode(2);
+        head1.next.next = new ListNode(3);
+        head1.next.next.next = new ListNode(4);
 
-        int[] nums = { 2, 7, 11, 15 };
-        int target = 9;
+        System.out.println("Example 1: No cycle");
+        hasCycle(head1);
 
-        // boolean result = hasCycle(nums, target);
-        // System.out.println("Indices: " + result);
+        System.out.println("\n====================\n");
+
+        // Example 2: Create a cycle (node 4 points back to node 2)
+        ListNode head2 = new ListNode(1);
+        head2.next = new ListNode(2);
+        head2.next.next = new ListNode(3);
+        head2.next.next.next = new ListNode(4);
+        head2.next.next.next.next = head2.next; // create a cycle: 4 → 2
+
+        System.out.println("Example 2: With cycle");
+        hasCycle(head2);
     }
-
 }

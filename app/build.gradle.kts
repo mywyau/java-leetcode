@@ -49,12 +49,17 @@ java {
 //     // mainClass = "my_springboot.App"  // uncomment and run for other app
 // }
 
+tasks.register("SameDirectionSlowAndFast", JavaExec::class) {
+    group = "application"
+    mainClass = "dsa.two_pointers.variations.SameDirectionSlowAndFast"
+    classpath = sourceSets.main.get().runtimeClasspath
+}
+
 tasks.register("QuickSort2", JavaExec::class) {
     group = "application"
     mainClass = "dsa.sorting.QuickSort2"
     classpath = sourceSets.main.get().runtimeClasspath
 }
-
 
 tasks.register("StringBasics", JavaExec::class) {
     group = "application"
