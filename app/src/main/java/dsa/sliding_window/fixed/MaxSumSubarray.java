@@ -16,7 +16,7 @@ public class MaxSumSubarray {
         return maxSum;
     }
 
-    // Fixed sliding window algorithm, basically improved brute force
+    // Fixed sliding window algorithm, basically improved over brute force
 
     public int maxSumSubarray(int[] nums, int k) {
 

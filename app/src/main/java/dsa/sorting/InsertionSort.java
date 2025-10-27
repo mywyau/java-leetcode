@@ -16,7 +16,7 @@ public class InsertionSort {
         int n = arr.length;
 
         for (int i = 1; i < n; i++) { // start from index 1
-            
+
             int key = arr[i]; // current element to insert
             int j = i - 1; // compare with previous elements
 
@@ -28,6 +28,15 @@ public class InsertionSort {
 
             // place key in correct position
             arr[j + 1] = key;
+        }
+    }
+
+    public static void insertionSort2(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i - 1; 
         }
     }
 
